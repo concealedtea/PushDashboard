@@ -1,5 +1,5 @@
 # <b> Push Dashboard </b>     
-![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)
+![NuGet](https://img.shields.io/badge/nuget-v4.4.0-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)  
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/concealedtea/)
