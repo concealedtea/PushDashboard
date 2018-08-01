@@ -1,0 +1,84 @@
+﻿﻿@model PushDashboard.Models.LoginModel
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Push Dashboard Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/admin-lte/img/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/vendor/hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Scripts/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-lte/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/admin-lte/css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login-content">
+                    <div class="login100-pic js-tilt">
+                        <img src="~/admin-lte/img/logo.png" alt="IMG">
+                    </div>
+                    <span class="login100-form-title">
+                        <b> Push Dashboard Login </b>
+                    </span>
+                    @using (Html.BeginForm("Login", "Login", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                            @Html.LabelFor(model => model.Username, new { @class = "col-md-2 control-label" })
+                            <div align="center">
+                                @Html.TextBoxFor(model => model.Username, new { @inputclass = "input100", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                            <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                                @Html.LabelFor(model => model.Password, new { @class = "col-md-2 control-label" })
+                                <div align="center">
+                                    @Html.PasswordFor(model => model.Password, new { @inputclass = "input100", @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <p style="color:red; font-size:16px; padding:10px; display:inline-block;" id="status"></p>
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn"> Login </button>
+                            </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
