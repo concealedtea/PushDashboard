@@ -8,7 +8,7 @@
 <b>Includes :</b>   
   
 - Admin Dashboard for Push Notifications Team at [Spigot Inc](https://www.spigot.com/).   
-- Located [here](dashboard.dailypush.net). <i> Ask for login </i>
+- Located [here](http://dashboard.dailypush.net/). <i> Ask for login </i>
 - Live updates to revenue based on advertiser   
 - Hourly refreshes based on SQL database changes
 
