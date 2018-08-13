@@ -14,7 +14,7 @@
 - Stored procedures parse JSON files with ajax calls to generate charts using [Chart.JS](https://www.chartjs.org/)
 
 ## How to Run  
-Open .sln file w/ Visual Studio, run with the button.   
+Open .sln file w/ Visual Studio, run with the <i>build</i> button.   
 Homepage should open in defaulted web browser.
 
 ## Snapshots (Not Real Numbers)
