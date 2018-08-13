@@ -132,10 +132,10 @@ namespace PushDashboard.Controllers
         public ContentResult AllowReceive15()
         {
             string Query = @"SELECT
-                	            CAST(DATEADD(HOUR,-4,timeslice)AS time) AS timeslice,
-                	            CASE CAST(DATEADD(HOUR,-4,timeslice) AS DATE)
-                		            WHEN CAST(GETDATE() AS DATE) THEN 'Today'
-                		            WHEN CAST(DATEADD(DAY,-7,GETDATE()) AS DATE) THEN 'Last Week'
+                	            timeslice,
+                	            CASE CAST(timeslice AS DATE)
+                		            WHEN CAST(DATEADD(HOUR,-4,GETDATE()) AS DATE) THEN 'Today'
+                		            WHEN CAST(DATEADD(DAY,-7,DATEADD(HOUR,-4,GETDATE())) AS DATE) THEN 'Last Week'
                 	            END AS DayOfWeek,
                                 platform,
                 	            SUM(allows) AS allows,
@@ -143,13 +143,13 @@ namespace PushDashboard.Controllers
                             FROM
                 	            Reports.dbo.DashboardMetrics WITH(NOLOCK)
                             WHERE 1=1
-                	            AND CAST(DATEADD(HOUR,-4,timeslice) AS DATE) IN (CAST(GETDATE() AS DATE) , CAST(DATEADD(DAY,-7,GETDATE()) AS DATE))
-                	            AND [date] BETWEEN CAST(DATEADD(DAY,-8,GETDATE()) AS DATE) AND CAST(GETDATE() AS DATE)
+                	            AND CAST(timeslice AS DATE) IN (CAST(DATEADD(HOUR,-4,GETDATE()) AS DATE) , CAST(DATEADD(DAY,-7,DATEADD(HOUR,-4,GETDATE())) AS DATE))
+                	            AND [date] BETWEEN CAST(DATEADD(DAY,-8,DATEADD(HOUR,-4,GETDATE())) AS DATE) AND CAST(DATEADD(HOUR,-4,GETDATE()) AS DATE)
                             GROUP BY
-                	            DATEADD(HOUR,-4,timeslice),
-                	            CASE CAST(DATEADD(HOUR,-4,timeslice) AS DATE)
-                		            WHEN CAST(GETDATE() AS DATE) THEN 'Today'
-                		            WHEN CAST(DATEADD(DAY,-7,GETDATE()) AS DATE) THEN 'Last Week'
+                	            timeslice,
+                	            CASE CAST(timeslice AS DATE)
+                		            WHEN CAST(DATEADD(HOUR,-4,GETDATE()) AS DATE) THEN 'Today'
+                		            WHEN CAST(DATEADD(DAY,-7,DATEADD(HOUR,-4,GETDATE())) AS DATE) THEN 'Last Week'
                 	            END,
                                 platform
                             ORDER BY

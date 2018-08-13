@@ -15,7 +15,7 @@
                 }
                 ]
             },
-            legend: { display: true },
+            legend:{display:true},
             tooltips: {
                 mode: 'label',
                 callbacks: {
@@ -27,7 +27,7 @@
                         for (var i = 0; i < data.datasets.length; i++)
                             total += data.datasets[i].data[tooltipItem.index];
                         // If it is not the last dataset, you display it as you usually do
-                        if (tooltipItem.datasetIndex != data.datasets.length - 1) {
+                        if (tooltipItem.datasetIndex != data.datasets.length - 2) {
                             if (valor.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') != "0.00") {
                                 return advertiser + " : $" + valor.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
                             }
@@ -51,15 +51,15 @@
                     }
                 }
                 a.data.labels = uniqueDates[0];
-                for (var b = 0;
-                b < c.length;
-                b++) a.data.datasets[b] = {
-                    label: ajaxData[b].Advertiser, backgroundColor: "rgb(" + Math.floor(256 * Math.random()) + "," + Math.floor(256 * Math.random()) + "," + Math.floor(256 * Math.random()) + ")", data: ajaxData[b].Revenue, yAxisID: "A"
+                for (var b = 0; b < ajaxData.length; b++) {
+                    a.data.datasets[b] = {
+                        label: ajaxData[b].Advertiser, backgroundColor: "rgb(" + Math.floor(256 * Math.random()) + "," + Math.floor(256 * Math.random()) + "," + Math.floor(256 * Math.random()) + ")", data: ajaxData[b].Revenue, yAxisID: "A"
+                    };
                 }
-                ;
+                // a.data.datasets[a.data.datasets.length] = {label:"Dummy",backgroundColor:"Black",data:[0] * 59}
                 a.update()
-            }
-            , error: function () {
+            },
+            error: function () {
                 console.log("Error")
             }
         }

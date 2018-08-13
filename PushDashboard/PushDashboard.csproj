@@ -283,6 +283,7 @@
     <Content Include="admin-lte\css\alt\AdminLTE-select2.min.css" />
     <Content Include="admin-lte\css\alt\AdminLTE-without-plugins.css" />
     <Content Include="admin-lte\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="admin-lte\css\custom.css" />
     <Content Include="admin-lte\css\main.css" />
     <Content Include="admin-lte\css\skins\skin-black-light.css" />
     <Content Include="admin-lte\css\skins\skin-black-light.min.css" />
@@ -715,6 +716,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\keen-analytics.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />

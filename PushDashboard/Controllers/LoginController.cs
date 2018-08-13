@@ -18,7 +18,7 @@ namespace PushDashboard.Controllers
         public Dictionary<string, string> LoginDict = new Dictionary<string, string>() {
    {
     "admin",
-    "pushdashboardlogin2018"
+    "spigot2018"
    },
   };
 
