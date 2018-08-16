@@ -13,6 +13,9 @@
 - 30 minute updates to allows and receives from SQL database
 - Stored procedures parse JSON files with ajax calls to generate charts using [Chart.JS](https://www.chartjs.org/)
 
+## General Info  
+<b><i>If broken, check database tables DailyRPC and DailyRevenue for errors first. Check logs on BIA server as well.</i></b>   
+
 ## How to Run  
 Open .sln file w/ Visual Studio, run with the <i>build</i> button.   
 Homepage should open in defaulted web browser.
