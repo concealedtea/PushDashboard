@@ -48,6 +48,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="admin-lte/css/alt/AdminLTE-without-plugins.min.css">
       <publishTime>07/30/2018 09:36:17</publishTime>
     </File>
+    <File Include="admin-lte/css/cryptoticker.css">
+      <publishTime>08/20/2018 11:31:34</publishTime>
+    </File>
     <File Include="admin-lte/css/custom.css">
       <publishTime>08/01/2018 17:21:16</publishTime>
     </File>
@@ -346,7 +349,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/27/2012 12:00:52</publishTime>
     </File>
     <File Include="bin/PushDashboard.dll">
-      <publishTime>08/07/2018 11:38:53</publishTime>
+      <publishTime>08/29/2018 12:56:48</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>05/24/2018 13:38:22</publishTime>
@@ -568,7 +571,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 09:35:45</publishTime>
     </File>
     <File Include="Scripts/allowsreceives.js">
-      <publishTime>08/02/2018 14:14:25</publishTime>
+      <publishTime>08/22/2018 11:13:21</publishTime>
+    </File>
+    <File Include="Scripts/beauty.js">
+      <publishTime>08/21/2018 16:06:28</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>07/30/2018 14:37:45</publishTime>
@@ -1473,6 +1479,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery-3.3.1.slim.min.map">
       <publishTime>07/30/2018 14:36:45</publishTime>
     </File>
+    <File Include="Scripts/jquery.cryptoticker.js">
+      <publishTime>08/20/2018 11:35:07</publishTime>
+    </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>07/30/2018 14:36:54</publishTime>
     </File>
@@ -1493,6 +1502,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>07/30/2018 14:37:02</publishTime>
+    </File>
+    <File Include="Scripts/payback.js">
+      <publishTime>08/23/2018 10:57:34</publishTime>
     </File>
     <File Include="Scripts/popper-utils.js">
       <publishTime>07/31/2018 13:20:53</publishTime>
@@ -1534,7 +1546,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 14:37:45</publishTime>
     </File>
     <File Include="Scripts/revenuebars.js">
-      <publishTime>08/07/2018 11:38:25</publishTime>
+      <publishTime>08/28/2018 15:25:37</publishTime>
+    </File>
+    <File Include="Scripts/revenuebars2.js">
+      <publishTime>08/29/2018 12:48:25</publishTime>
     </File>
     <File Include="Scripts/tether.js">
       <publishTime>07/30/2018 09:36:15</publishTime>
@@ -1618,7 +1633,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2018 15:03:07</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>08/01/2018 14:40:33</publishTime>
+      <publishTime>08/29/2018 12:39:55</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>07/30/2018 09:35:37</publishTime>
@@ -1659,14 +1674,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Home/About.cshtml">
       <publishTime>07/30/2018 09:35:33</publishTime>
     </File>
+    <File Include="Views/Home/Beautiful.cshtml">
+      <publishTime>08/21/2018 15:43:15</publishTime>
+    </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>07/30/2018 16:52:07</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/06/2018 13:25:48</publishTime>
+      <publishTime>08/29/2018 12:56:01</publishTime>
     </File>
     <File Include="Views/Home/Login.cshtml">
       <publishTime>08/01/2018 10:26:14</publishTime>
+    </File>
+    <File Include="Views/Home/Payback.cshtml">
+      <publishTime>08/22/2018 09:40:12</publishTime>
+    </File>
+    <File Include="Views/Home/Snake.cshtml">
+      <publishTime>08/21/2018 16:10:59</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>07/30/2018 09:35:37</publishTime>
@@ -1693,7 +1717,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 09:35:37</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/01/2018 10:28:53</publishTime>
+      <publishTime>08/21/2018 16:07:10</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>07/30/2018 09:35:37</publishTime>
@@ -1705,7 +1729,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2018 09:35:33</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/07/2018 11:38:54</publishTime>
+      <publishTime>08/29/2018 10:23:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

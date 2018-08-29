@@ -28,18 +28,20 @@ namespace PushDashboard.Controllers
         {
             return View("/Views/Home/Login.cshtml");
         }
-        public ActionResult About()
+        public ActionResult Snake()
         {
-            ViewBag.Message = "Your application description page.";
+            return View("/Views/Home/Snake.cshtml");
+        }
+        public ActionResult Payback()
+        {
             if (CheckIfValid(Request.Cookies["Validation"]))
             {
                 return View();
             }
             return null;
         }
-        public ActionResult Contact()
+        public ActionResult Beautiful()
         {
-            ViewBag.Message = "Your contact page.";
             if (CheckIfValid(Request.Cookies["Validation"]))
             {
                 return View();

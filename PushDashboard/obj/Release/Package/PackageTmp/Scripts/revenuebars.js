@@ -2,6 +2,11 @@
     var d = document.getElementById("revenue-bars"), a = new Chart(d, {
         type: "bar", data: {}
         , options: {
+            title: {
+                display: true,
+                fontSize: 25,
+                text: 'Revenue (Trailing 60 days), Seperated by Advertiser (Stacked Bars)'
+               },
             autoSkip: !1, responsive: !0, maintainAspectRatio: !0, scales: {
                 xAxes: [{
                     label: "date", stacked: !0, ticks: {
@@ -27,12 +32,12 @@
                         for (var i = 0; i < data.datasets.length; i++)
                             total += data.datasets[i].data[tooltipItem.index];
                         // If it is not the last dataset, you display it as you usually do
-                        if (tooltipItem.datasetIndex != data.datasets.length - 2) {
+                        if (tooltipItem.datasetIndex == data.datasets.length - 2) {
+                            return ["Total : $" + total.toFixed(2).toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,')];
+                        } else { // .. else, you display the dataset and the total, using an array
                             if (valor.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') != "0.00") {
                                 return advertiser + " : $" + valor.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
                             }
-                        } else { // .. else, you display the dataset and the total, using an array
-                            return ["Total : $" + total.toFixed(2).toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,')];
                         }
                     }
                 }
@@ -58,6 +63,9 @@
                 }
                 // a.data.datasets[a.data.datasets.length] = {label:"Dummy",backgroundColor:"Black",data:[0] * 59}
                 a.update()
+            },
+            complete: function () {
+                setInterval(sendRequest, 86400000);
             },
             error: function () {
                 console.log("Error")

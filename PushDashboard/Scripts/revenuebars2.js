@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
-    var d = document.getElementById("revenue-bars"), a = new Chart(d, {
+    var d = document.getElementById("revenue-bars-2"), a = new Chart(d, {
         type: "bar", data: {}
         , options: {
             title: {
                 display: true,
                 fontSize: 25,
-                text: 'Revenue (Trailing 60 days), Seperated by Advertiser (Stacked Bars)'
-               },
+                text: 'Revenue (Trailing 60 days), Seperated by Platform (Stacked Bars)'
+            },
             autoSkip: !1, responsive: !0, maintainAspectRatio: !0, scales: {
                 xAxes: [{
                     label: "date", stacked: !0, ticks: {
@@ -20,7 +20,7 @@
                 }
                 ]
             },
-            legend:{display:true},
+            legend: { display: true },
             tooltips: {
                 mode: 'label',
                 callbacks: {
@@ -32,7 +32,7 @@
                         for (var i = 0; i < data.datasets.length; i++)
                             total += data.datasets[i].data[tooltipItem.index];
                         // If it is not the last dataset, you display it as you usually do
-                        if (tooltipItem.datasetIndex == data.datasets.length - 2) {
+                        if (tooltipItem.datasetIndex == data.datasets.length) {
                             return ["Total : $" + total.toFixed(2).toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,')];
                         } else { // .. else, you display the dataset and the total, using an array
                             if (valor.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') != "0.00") {
@@ -45,9 +45,10 @@
         }
     }
     );
+
     (function () {
         $.ajax({
-            url: "/Dashboard/RevByAdvertiser", type: "get", dataType: "json", success: function (c) {
+            url: "/Dashboard/RevByPlatform", type: "get", dataType: "json", success: function (c) {
                 ajaxData = c;
                 var uniqueDates = [];
                 for (i = 0; i < ajaxData.length; i++) {

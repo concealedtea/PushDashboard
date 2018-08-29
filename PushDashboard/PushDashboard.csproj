@@ -164,6 +164,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -283,6 +284,7 @@
     <Content Include="admin-lte\css\alt\AdminLTE-select2.min.css" />
     <Content Include="admin-lte\css\alt\AdminLTE-without-plugins.css" />
     <Content Include="admin-lte\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="admin-lte\css\cryptoticker.css" />
     <Content Include="admin-lte\css\custom.css" />
     <Content Include="admin-lte\css\main.css" />
     <Content Include="admin-lte\css\skins\skin-black-light.css" />
@@ -395,6 +397,7 @@
     <Content Include="admin-lte\css\adminlte.min.css.map" />
     <Content Include="admin-lte\css\adminlte.css.map" />
     <Content Include="Scripts\allowsreceives.js" />
+    <Content Include="Scripts\beauty.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -711,6 +714,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.cryptoticker.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -718,6 +722,7 @@
     <Content Include="Scripts\keen-analytics.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\payback.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -727,6 +732,8 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\revenuebars.js" />
+    <Content Include="Scripts\revenuebars2.js" />
+    <Content Include="Scripts\revenuebars3.js" />
     <Content Include="Scripts\tether.js" />
     <Content Include="Scripts\tether.min.js" />
     <Content Include="Scripts\tilt.jquery.min.js" />
@@ -762,8 +769,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Payback.cshtml" />
+    <Content Include="Views\Home\Beautiful.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -797,6 +804,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Snake.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin-lte\plugins\" />

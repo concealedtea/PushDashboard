@@ -4,6 +4,11 @@
             type: "bar",
             data: {},
             options: {
+                title: {
+                    display: true,
+                    fontSize: 15,
+                    text: 'Allows (Today/Yesterday/Last Week Desktop)(Bar + Lines)'
+                },
                 maintainAspectRatio: !1,
                 fill: !1,
                 scales: {
@@ -29,6 +34,11 @@
             type: "bar",
             data: {},
             options: {
+                title: {
+                    display: true,
+                    fontSize: 15,
+                    text: 'Allows (Today/Yesterday/Last Week Mobile)(Bar + Lines)'
+                },
                 maintainAspectRatio: !1,
                 fill: !1,
                 scales: {
@@ -54,6 +64,11 @@
            type: "bar",
            data: {},
            options: {
+               title: {
+                   display: true,
+                   fontSize: 15,
+                   text: 'Receives (Today/Yesterday/Last Week Desktop)(Bar + Lines)'
+               },
                maintainAspectRatio: !1,
                fill: !1,
                scales: {
@@ -79,6 +94,11 @@
            type: "bar",
            data: {},
            options: {
+               title: {
+                   display: true,
+                   fontSize: 15,
+                   text: 'Receives (Today/Yesterday/Last Week Mobile)(Bar + Lines)'
+               },
                maintainAspectRatio: !1,
                fill: !1,
                scales: {
@@ -109,85 +129,121 @@
                 // Allows Desktop
                 for (var h = [], k = [], l = [], c, d, e, a = e = d = c = 0; a < b.Date.length; a++) {
                     if (ajaxData.Platform[a] == "Desktop") {
-                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Allows[a], c++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Allows[a], e++);
+                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Allows[a], c++), "Yesterday" == ajaxData.DayOfWeek[a] && (k[d] = ajaxData.Allows[a], d++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Allows[a], e++);
                     }
                 }
-                z.data.datasets[1] = {
+                z.data.datasets[2] = {
                     label: ["Today"],
                     fillColor: "blue",
                     backgroundColor: "rgb(51, 204, 255)",
                     data: h,
                     type: "bar"
+                };
+                z.data.datasets[1] = {
+                    label: ["Yesterday"],
+                    backgroundColor: "transparent",
+                    borderColor: "grey",
+                    data: k,
+                    type: "line",
+                    radius: 0
                 };
                 z.data.datasets[0] = {
                     label: ["Last Week"],
                     backgroundColor: "transparent",
                     borderColor: "red",
                     data: l,
-                    type: "line"
+                    type: "line",
+                    radius: 0
                 };
                 z.update();
                 // Allows Mobile
                 for (var h = [], k = [], l = [], c, d, e, a = e = d = c = 0; a < b.Date.length; a++) {
                     if (ajaxData.Platform[a] == "Mobile") {
-                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Allows[a], c++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Allows[a], e++);
+                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Allows[a], c++), "Yesterday" == ajaxData.DayOfWeek[a] && (k[d] = ajaxData.Allows[a], d++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Allows[a], e++);
                     }
                 }
-                y.data.datasets[1] = {
+                y.data.datasets[2] = {
                     label: ["Today"],
                     fillColor: "blue",
                     backgroundColor: "rgb(51, 204, 255)",
                     data: h,
                     type: "bar"
+                };
+                y.data.datasets[1] = {
+                    label: ["Yesterday"],
+                    backgroundColor: "transparent",
+                    borderColor: "grey",
+                    data: k,
+                    type: "line",
+                    radius: 0
                 };
                 y.data.datasets[0] = {
                     label: ["Last Week"],
                     backgroundColor: "transparent",
                     borderColor: "red",
                     data: l,
-                    type: "line"
+                    type: "line",
+                    radius: 0
                 };
                 y.update();
                 // Receives Desktop
                 for (var h = [], k = [], l = [], c, d, e, a = e = d = c = 0; a < b.Date.length; a++) {
                     if (ajaxData.Platform[a] == "Desktop") {
-                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Receives[a], c++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Receives[a], e++);
+                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Receives[a], c++), "Yesterday" == ajaxData.DayOfWeek[a] && (k[d] = ajaxData.Receives[a], d++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Receives[a], e++);
                     }
                 }
-                x.data.datasets[1] = {
+                x.data.datasets[2] = {
                     label: ["Today"],
                     fillColor: "blue",
                     backgroundColor: "rgb(51, 204, 255)",
                     data: h,
                     type: "bar"
+                };
+                x.data.datasets[1] = {
+                    label: ["Yesterday"],
+                    backgroundColor: "transparent",
+                    borderColor: "grey",
+                    data: k,
+                    type: "line",
+                    radius: 0
                 };
                 x.data.datasets[0] = {
                     label: ["Last Week"],
                     backgroundColor: "transparent",
                     borderColor: "red",
                     data: l,
-                    type: "line"
+                    type: "line",
+                    radius: 0
                 };
                 x.update();
                 // Receives Mobile
                 for (var h = [], k = [], l = [], c, d, e, a = e = d = c = 0; a < b.Date.length; a++) {
                     if (ajaxData.Platform[a] == "Mobile") {
-                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Receives[a], c++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Receives[a], e++);
+                        "Today" == ajaxData.DayOfWeek[a] && (h[c] = ajaxData.Receives[a], c++), "Yesterday" == ajaxData.DayOfWeek[a] && (k[d] = ajaxData.Receives[a], d++), "Last Week" == ajaxData.DayOfWeek[a] && (l[e] = ajaxData.Receives[a], e++);
                     }
                 }
-                w.data.datasets[1] = {
+                w.data.datasets[2] = {
                     label: ["Today"],
                     fillColor: "blue",
                     backgroundColor: "rgb(51, 204, 255)",
                     data: h,
                     type: "bar"
                 };
+                w.data.datasets[1] = {
+                    label: ["Yesterday"],
+                    backgroundColor: "transparent",
+                    borderColor: "grey",
+                    data: k,
+                    type: "line",
+                    radius: 0
+                };
                 w.data.datasets[0] = {
                     label: ["Last Week"],
                     backgroundColor: "transparent",
                     borderColor: "red",
                     data: l,
-                    type: "line"
+                    type: "line",
+                    radius: 0
                 };
                 w.update();
             },
